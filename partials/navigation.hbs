@@ -1,0 +1,9 @@
+<!--Under navigation, blocks are treated as inline-blocks, meaning that there will be a vertical gap in between the elements. To get rid of this, one can use funky formatting (><a ...></a) or set font size to 0-->
+<div class="header_tab_container_alex">
+  {{#foreach navigation}}
+      <a href='{{url}}' class="header_tab_alex">
+        {{label}}
+      </a>
+  {{/foreach}}
+</div>
+

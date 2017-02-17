@@ -1,0 +1,108 @@
+//**
+// Styles
+//**
+body{
+  visibility: hidden;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  &.project_thumbnail_alex {
+    //display: block;
+    box-sizing: border-box;
+    //float: left;
+    padding: 10px;
+    width:100%;
+    height: 100%;
+    position: absolute; 
+    object-fit: contain;
+}
+}
+
+.img_container {
+  //line-height: 0;
+  width:50%;
+  float: left;
+  overflow: hidden;
+  //Intrinsic ratio box so container height scales to the width
+  position: relative;
+  //TODO: use variable
+  padding-bottom: 33.3333333%;
+  height: 0;
+}
+
+.overlay_container {
+  position: absolute; 
+  z-index: 100;
+  background: rgba(0,0,0,0.75);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 500ms;
+  
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+  
+  .overlay_text {
+    color:white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+}
+
+.article_about_alex{
+  text-align: center;
+  .profile_pic_alex {
+    width: 25%;
+  }
+}
+
+.wrapper_alex {
+  width:100%;
+  max-width: @readable_width;
+  margin: 0 auto;
+}
+
+.header_alex {
+  //Make nav bar static and always appear on top
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding-top: (1em * @golden);
+  
+  * {
+    display: inline-block
+  }
+  
+  max-width: @header_footer_width;
+  //Center our div and some vertical clearance
+  margin: 0 auto @header_bottom_margin;
+  
+  .blogtitle_alex {
+    //Top, right & left, bottom
+    margin: 0 auto (0.25em * @golden);
+    padding-right: 2em * @golden;
+    font-size: 1.5em;
+  }
+  
+  .header_tab_alex {
+    padding: 0 0.5em * @golden;
+  }
+  
+  border-bottom: 0.10em * @golden solid #000;
+  
+}
+
+.footer_alex {
+  max-width: @header_footer_width;
+  border-top: 0.10em * @golden solid #000;
+  margin: @header_bottom_margin auto 0;
+}

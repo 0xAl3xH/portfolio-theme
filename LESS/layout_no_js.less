@@ -1,0 +1,10 @@
+.no_js .header_alex {
+  // Disable scrollable nav bar for users without JS support 
+  position: relative;
+}
+
+// In JS supported browsers, we're styling all content to be hidden initially.
+// Without JS support, we'll have to keep the body visible at all times.
+.no_js body {
+  visibility: visible;
+}

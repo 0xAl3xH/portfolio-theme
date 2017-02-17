@@ -1,0 +1,13 @@
+<div role='banner' class="header_alex">
+  {{#if @blog.logo}}
+    <a class="logo_alex" href="{{@blog.url}}">
+      <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+    </a>
+  {{/if}}
+  <h5 class="blogtitle_alex">
+    <a title="{{@blog.title}}" href='{{@blog.url}}'>
+      Portfolio
+    </a>
+  </h5>
+  {{navigation}}
+</div>

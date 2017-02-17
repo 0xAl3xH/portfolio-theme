@@ -1,0 +1,52 @@
+{{!< default}}
+
+<main class="main_alex" role="main">
+{{#post}}
+  <article class="article_alex" role="article" itemscope itemtype="http://schema.org/Article">
+    
+    <header class="postheader_alex">
+      <h1 class="posttitle_alex" itemprop="headline">{{title}}</h1>
+      <time class="date_alex" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+        {{date format='dddd, MMM DD YYYY'}}
+      </time>
+    </header>
+    
+    <div class="postcontent_alex" itemprop="articleBody">
+      {{content}}
+    </div>
+    
+    <div class="sharepost_alex">
+      <h4 class="share_alex">Share this post: &nbsp;</h4>
+      <a class="share_alex icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hidethis_alex">Twitter</span></a>
+      <a class="share_alex icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hidethis_alex">Facebook</span></a>
+      <a class="share_alex icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hidethis_alex">Google+</span></a>
+    </div>
+    {{#if author}}
+      <footer class="postfooter_alex">
+        <address itemscope itemtype="http://schema.org/Person">
+          {{#if author.image}}
+            <div class="authorimage_alex">
+              <img src="{{author.image}}" itemprop="image" />
+            </div>
+          {{/if}}
+          <h4 class="authorname_alex"><span itemprop="author">{{author.name}}</span></h4>
+          {{#if author.website}}
+            <div class="authorwebsite_alex">
+              <a href="{{author.website}}" itemprop="url">{{author.website}}</a>
+            </div>
+          {{/if}}
+        </address>
+        <div class="authorbio_alex">
+          <p>{{author.bio}}</p>
+        </div>
+      </footer>
+    {{/if}}
+  </article>
+{{/post}}
+  
+{{#if pagination}}
+  <div class="pagination_alex">
+    {{{pagination}}}
+  </div>
+{{/if}}
+</main>

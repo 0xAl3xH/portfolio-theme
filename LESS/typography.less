@@ -1,0 +1,123 @@
+//**
+// Mixins
+//**
+ 
+.HeaderFont () {
+    font-family: @header_font;
+    line-height: 1.313em;
+    font-weight: 400;
+}
+ 
+//**
+// Global Typography Styles
+//**
+ 
+body {
+    margin: 0;
+    font-family: @default_font;
+    line-height: @golden + 0em; //set the regular line height to the golden ratio
+    font-weight: 300;
+}
+ 
+a {
+    transition:  color ease 0.2s;
+    background: transparent;
+}
+  
+a:link, a:visited{
+    text-decoration: none;
+    color:#07C;
+}
+
+a:active,
+a:hover {
+    color: black;
+}
+
+ 
+// Classic typographic scale: if default 16px total size scale would be:
+// 9px, 10px, 11px, 12px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px
+ 
+h1 {
+  .HeaderFont;
+  font-size: 3em;
+  margin: 0.563em 0;
+}
+ 
+h2 {
+  .HeaderFont;
+  font-size: 2.25em;
+  margin: 0.625em 0;
+}
+ 
+h3 {
+  .HeaderFont;
+  font-size: 1.5em;
+  margin: 1.313em 0;
+}
+ 
+h4 {
+  .HeaderFont;
+  font-size: 1.313em;
+  margin: 1.313em 0;
+}
+ 
+h5 {
+  .HeaderFont;
+  font-size: 1.125em;
+  margin: 1.313em 0;
+}
+ 
+h6 {
+  .HeaderFont;
+  font-size: 1em;
+  margin: 0.75em 0;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-all;
+  background-color: #eff0f1;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+code {
+  border-radius: 0.3em;
+  background-color: #eff0f1;
+}
+
+//Header Specific Typography Style
+.header_alex {
+  
+  background-color: rgba(255, 255, 255, 0.95);
+  
+  .header_tab_alex{
+    transition: color 0.5s ease, border 0.5s ease; 
+    border: solid 0.1em rgba(185, 185, 185, 0);
+  }
+  
+  a:link, a:visited{
+    color:black;
+  }
+  
+  a:active, a:hover {
+    color:rgb(185, 185, 185);
+  }
+  
+  .header_tab_alex:active, .header_tab_alex:hover {
+    border: solid 0.1em rgba(185, 185, 185, 255);
+    color:rgb(185, 185, 185);
+  }
+}
+
+.profile_pic_alex {
+  border-radius: @golden * 0.75em;
+}
+
+.sexy_line_alex {
+    margin: 0.25em 0 5em;
+    height: 2px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+}

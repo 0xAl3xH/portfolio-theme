@@ -1,0 +1,16 @@
+{{!< default}}
+<main class="main_alex" role="main">  
+  {{#post}}
+    <article class="article_about_alex" role="article" itemscope itemtype="http://schema.org/Article">
+      <header class="postheader_alex">
+        <h1 class="posttitle_alex" itemprop="headline">{{title}}</h1>
+      </header>
+
+      <img class="profile_pic_alex" src={{image}}>
+
+      <div class="postcontent_alex" itemprop="articleBody">
+        {{content}}
+      </div>
+    </article>
+  {{/post}}
+</main>
