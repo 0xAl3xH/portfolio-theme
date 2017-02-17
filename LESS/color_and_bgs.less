@@ -2,3 +2,16 @@
 // Mixins
 //**
 
+a {
+    transition:  color ease 0.2s;
+    background: transparent;
+}
+
+a:link, a:visited{
+    color:@link_blue;
+}
+
+a:active,
+a:hover {
+    color: black;
+}
