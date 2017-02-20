@@ -8,5 +8,13 @@
 </div>
 
 <div class="header_tab_container_mobile_alex">
+  {{#foreach navigation}}
+      <a href='{{url}}' class="header_tab_mobile_alex">
+        {{label}}
+      </a>
+  {{/foreach}}
+</div>
+
+<div class="header_tab_button_mobile_alex">
   <span class="fa fa-bars fa-2x"></i>
 </div>
