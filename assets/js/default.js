@@ -6,7 +6,6 @@ $(window).on('load', function () {
   $(window).resize(function () {
     setupFixedNav();
     setupHeaderTabMobile();
-    console.log("resieze");
   });
   //Setup complete, reveal the page to the user. 
   makeVisible();
@@ -39,7 +38,7 @@ function toggleMenuMobile() {
     show = !show;
     if (show) {
       $(menu).css('overflow','scroll');
-      $(menu).animate({height: $( window ).height() -$('.header_alex').outerHeight(false)});
+      $(menu).animate({height: window.innerHeight -$('.header_alex').outerHeight(false)});
     } else {
       $(menu).css('overflow','hidden');
       $(menu).animate({height: 0});
