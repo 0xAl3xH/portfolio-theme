@@ -38,7 +38,8 @@ function toggleMenuMobile() {
     show = !show;
     if (show) {
       $(menu).css('overflow','scroll');
-      $(menu).animate({height: window.innerHeight -$('.header_alex').outerHeight(false)});
+      //TODO: Find a better solution for taking into account of the nav bar height
+      $(menu).animate({height: window.innerHeight -$('.header_alex').outerHeight(false) + 100});
     } else {
       $(menu).css('overflow','hidden');
       $(menu).animate({height: 0});
