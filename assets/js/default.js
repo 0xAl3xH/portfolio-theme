@@ -41,7 +41,7 @@ function toggleMenuMobile() {
       $(menu).css('overflow','scroll');
       $(menu).animate({height: $( window ).height() -$('.header_alex').outerHeight(false)});
     } else {
-      $(menu).css('overflow','hide');
+      $(menu).css('overflow','hidden');
       $(menu).animate({height: 0});
     } 
   }
