@@ -16,8 +16,9 @@
   
     {{! Javascripts}}
     <script type='text/javascript' src="{{asset "js/all.min.js"}}"></script>
+    <script type='text/javascript' src="{{asset "js/default.js"}}"></script>
     <script type='text/javascript'>
-      //Client has js enabled, use JS enabled style sheet 
+      //Client has JS enabled, use JS enabled style sheet 
       $('html').removeClass('no_js');
     </script>
     
@@ -36,6 +37,5 @@
   </div>
   {{> footer}}
   {{ghost_foot}}
-  <script type='text/javascript' src="{{asset "js/default.js"}}"></script>
 </body>
 </html>
