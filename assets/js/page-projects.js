@@ -26,7 +26,7 @@ function getProjectPosts(pageIndex) {
       filter: "tags:projects"
     })
   ).done(function (data) {
-    console.log(data.posts);
+    //console.log(data.posts);
     appendThumbnails(mainContainer, data.posts);
     return data.posts;
   });
